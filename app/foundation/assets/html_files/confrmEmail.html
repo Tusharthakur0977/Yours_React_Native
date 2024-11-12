@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        background: #faf1f4;
+      }
+      .header {
+        display: flex;
+        width: 100%;
+        background-color: #16462e;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 0px;
+      }
+      .header img {
+        height: auto;
+        max-height: 40px;
+        width: auto;
+        max-width: 100%;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 400px;
+        padding-top: 60px;
+        gap: 30px;
+      }
+      .welcome {
+        color: #000;
+        font-weight: bold;
+        margin: 0;
+        font-size: 4vw;
+      }
+      .text-block,
+      .button-block {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .text {
+        color: #16462e;
+        margin: 0;
+        font-weight: 600;
+      }
+      .button {
+        margin-top: 10px;
+        background-color: #16462e;
+        padding: 10px 20px;
+        align-self: flex-start;
+        color: white;
+        border-radius: 8px;
+        font-weight: 700;
+      }
+      .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 20px;
+      }
+      .footer p {
+        color: #16462e;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      /* Media Query for devices with max width of 480px */
+      @media (max-width: 480px) {
+        .content {
+          padding-top: 60px;
+          width: 75%; /* Increase width for smaller screens */
+        }
+        .welcome {
+          font-size: 6vw; /* Larger font size for the headline */
+        }
+        .header {
+          padding: 35px 10px;
+        }
+        .header img {
+          height: auto;
+          max-height: 30px;
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/yours-251b3.appspot.com/o/audio%2FYOUR_WHITE.png?alt=media&token=5384d504-51c0-48b8-b6e7-29121875fd4e"
+        alt="Logo"
+        class="logo"
+      />
+    </div>
+    <div class="content">
+      <p class="welcome">Welcome to YOURS!</p>
+      <div class="text-block">
+        <p class="text">Hey <strong>USERNAME</strong>,</p>
+        <p style="color: black; margin: 0">
+          I wanted to give you a warm welcome and say congrats on making the
+          leap to start spending more time with yourself!
+        </p>
+      </div>
+      <div class="text-block">
+        <h4 class="text">It's YOUR time.</h4>
+        <p style="color: black; margin: 0">
+          Please take a few seconds to confirm your email address. Once
+          everything is confirmed, you can get to writing!
+        </p>
+      </div>
+      <button class="button">Confirm Email Address</button>
+      <div class="footer">
+        <p>With love,</p>
+        <p style="color: black; font-weight: bold">YOUR Founder Anna</p>
+      </div>
+    </div>
+  </body>
+</html>

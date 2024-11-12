@@ -1,0 +1,16 @@
+{
+  "API_BASE_URL": "https://yours-backend.onrender.com/api/v1/",
+  "TERMS_URL": "https://app.termly.io/document/terms-of-service/f8e7f2d7-3bc0-4766-908b-84b42fb01977",
+  "PRIVACY_URL": "https://app.termly.io/document/privacy-policy/4ce2402b-eb00-4ac8-a228-5872e99f0a35",
+  "ABOUT_US": "https://www.yoursapp.co/about",
+  "CONTACT_US": "https://www.yoursapp.co/contact",
+  "WEBSITE": "https://www.yoursapp.co/",
+  "ONLINE_NA_MEET": "https://virtual-na.org/meetings/",
+  "MEETINGS_NEAR_YOU": "https://www.aa.org/find-aa",
+  "JOIN_MEETINGS": "https://us02web.zoom.us/j/2020061935?pwd=eFJkNTZ0eEJPMFhNY2ZONndQbmh2dz09#success",
+  "SMART_RECOVERY_MEET": "https://meetings.smartrecovery.org/meetings/?gad_source=1&gclid=Cj0KCQjw6auyBhDzARIsALIo6v-hTOKEJ-J_luiVKchkUUm9RdoE2MLufEtMH2mFscrfayi5_OxUXDsaAmDBEALw_wcB",
+  "RECOVERY_MEET": "https://recoverydharma.org/meetings/",
+  "YOURS_CREATOR": "https://www.youtube.com/@annabarram",
+  "TWELVE_STEPS": "https://oa-ottawa.ca/wp-content/uploads/2020/11/Prayers-from-the-Big-Book-of-Alcoholics-Anonymous.pdf",
+  "GOOGLE_MAPS_API_KEY": "AIzaSyBW6PmAbGxAU_01g4CHlZ4oaYthN0dia3c"
+}

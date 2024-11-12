@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Welcome Email</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        box-sizing: border-box;
+      }
+
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: auto;
+        max-height: 30px; /* Maintained consistent max-height */
+        width: auto;
+        max-width: 100%;
+      }
+      .tick_icon {
+        height: auto;
+        max-height: 40px; /* Maintained consistent max-height */
+        width: auto;
+        max-width: 100%;
+      }
+      .content {
+        flex: 1;
+        width: 100%; /* Consistent with mobile view */
+        background-color: #faf1f4;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: relative;
+      }
+      .welcome {
+        color: #16462e;
+        font-weight: bold;
+        font-size: 3vw; /* Fixed size with adjustment for responsiveness below */
+        margin: 0;
+      }
+      .text {
+        color: #16462e;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .button {
+        background-color: #16462e;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      /* Media Queries for responsiveness */
+      @media (max-width: 480px) {
+        body {
+          padding: 20px;
+        }
+        .content {
+          width: 100%; /* Full width on smaller screens */
+          padding: 30px;
+        }
+        .welcome {
+          font-size: 8vw; /* Dynamic sizing for mobile devices */
+        }
+        .tick_icon {
+          height: auto;
+          max-height: 30px; /* Maintained consistent max-height */
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <img
+        class="logo"
+        src="https://firebasestorage.googleapis.com/v0/b/yours-251b3.appspot.com/o/audio%2FYOURS%20app%20logo%20green%20final.png?alt=media&token=0edf8279-ed8c-445a-9190-ab5401f26487"
+        alt="Logo"
+      />
+      <img
+        class="tick_icon"
+        src="https://firebasestorage.googleapis.com/v0/b/yours-251b3.appspot.com/o/audio%2Fgreencheck.png?alt=media&token=f756993f-935b-4316-ad6a-254aef365c01"
+        alt="Tick"
+      />
+
+      <p class="welcome">You're all set!</p>
+      <p class="text">It's time to open YOURS and start writting. Let's go!</p>
+      <button class="button">Go to YOURS app</button>
+    </div>
+  </body>
+</html>

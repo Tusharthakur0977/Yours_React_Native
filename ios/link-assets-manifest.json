@@ -1,0 +1,33 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "app/foundation/assets/fonts/DMSerifDisplay-Regular.ttf",
+      "sha1": "52571de962e2d8f26c20406d2400ec77676001b2"
+    },
+    {
+      "path": "app/foundation/assets/fonts/Helvetica-Bold.ttf",
+      "sha1": "d064906892c6baf2916d5102910026ba0a4f2664"
+    },
+    {
+      "path": "app/foundation/assets/fonts/Helvetica.ttf",
+      "sha1": "53cb59bdb997dd39dc70b95d50133583e66ebdcb"
+    },
+    {
+      "path": "app/foundation/assets/fonts/index.ts",
+      "sha1": "aeb7809c253699dc1e6d682b077998a226b126fa"
+    },
+    {
+      "path": "app/foundation/assets/fonts/OpenSans-Bold.ttf",
+      "sha1": "953814da1b753763dfa5a7ecc18bdbb14890e16b"
+    },
+    {
+      "path": "app/foundation/assets/fonts/OpenSans-Light.ttf",
+      "sha1": "9292ee344b331c5959c7b130d1a2df5543dfa58a"
+    },
+    {
+      "path": "app/foundation/assets/fonts/OpenSans-Regular.ttf",
+      "sha1": "76ea5d4c70539ad9b0e7faf7e4fbe3bae8a961c7"
+    }
+  ]
+}

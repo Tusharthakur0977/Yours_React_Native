@@ -1,0 +1,22 @@
+{
+  "global": {
+    "something_wrong": "We're sorry, but something went wrong. Please try again in a few minutes."
+  },
+  "auth": {
+    "signup" : "Sign Up",
+    "log_into_yours" : "Log Into YOURS",
+    "email" : "Email",
+    "email_address" : "Email address",
+    "password" : "Password",
+    "remember_me" : "Remember me",
+    "forgot_password" : "Forgot Password?",
+    "log_in" : "Log In",
+    "dont_have_account" : "Don’t have an account?"
+   
+  },
+  "validations" : {
+    "enter_email" : "Please enter your email address.",
+    "enter_valid_email" : "Please provide a valid email address.",
+    "enter_password" : "Please enter your password."
+  }
+}
