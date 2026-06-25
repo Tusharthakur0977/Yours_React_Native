@@ -1,79 +1,40 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🧘‍♀️ Yours - React Native Journaling & Self-Care App
 
-# Getting Started
+Yours is a beautifully crafted, high-performance React Native application designed for habit tracking, daily journaling, and goal management. Built with modern architecture in mind, the app leverages cutting-edge state management, robust data caching, and an intricate local notification engine to deliver a seamless, native-like user experience.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 🚀 Tech Stack
 
-## Step 1: Start the Metro Server
+This project is built using modern React Native paradigms, eschewing legacy tools in favor of high-performance, type-safe alternatives:
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+*   **Framework:** React Native (0.73.6) with TypeScript
+*   **State Management:** `@legendapp/state` (Ultra-fast, fine-grained reactive state management)
+*   **Data Fetching & Caching:** `React Query` (v3) for asynchronous server state and caching
+*   **Local Storage:** `react-native-mmkv` (High-performance, synchronous key-value storage written in C++)
+*   **Routing:** React Navigation (v6) implementing complex Nested Stacks & Bottom Tabs
+*   **UI & Styling:** `@shopify/restyle` for a strictly typed, theme-based design system
+*   **Animations:** `react-native-reanimated` for smooth, 60FPS UI interactions
+*   **Notifications:** `@notifee/react-native` combined with Firebase Cloud Messaging
+*   **Date & Localization:** `dayjs`, `i18next`, and `react-native-localize` for timezone-aware, multi-language support
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## ⭐ Spotlight Feature: Context-Aware Deep Notification Engine
 
-```bash
-# using npm
-npm start
+**The Problem:** 
+In a journaling app, user retention relies heavily on timely, actionable prompts. However, routing a user from a background OS notification directly into a highly nested screen (e.g., a specific morning journal prompt) while passing complex payload data (dates, localized placeholders, specific question IDs) often leads to race conditions, navigation state errors, or broken user context.
 
-# OR using Yarn
-yarn start
-```
+**The Engineering Solution:**
+I engineered a custom Notification Press Handler (`notificationPressHandler.tsx`) that acts as a bridge between Notifee's background event listeners and React Navigation's state tree. 
 
-## Step 2: Start your Application
+*   **Dynamic Deep Linking:** Instead of simply opening the app, the engine intercepts the `EventType.PRESS` payload and parses custom properties like `JOURNAL_REMINDER`, `Question_prompt_morning`, `WEEKLY_INTENTION`, or `TimerNotification`.
+*   **Complex Payload Hydration:** It dynamically calculates dates (using custom utility helpers) and constructs a nested navigation route array. For example, a morning prompt notification explicitly routes the user through `Tabs -> JournalStack -> JournalQuestion` while safely injecting the prompt text, modal dates, and placeholder data as route params.
+*   **State Safety:** By using `navigation.replace` within the handler, it prevents the user from accidentally navigating "back" to a broken state, ensuring the navigation stack remains clean and memory leaks are avoided.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## 🛠 Key Features
 
-### For Android
+*   **Reactive, Jitter-Free UI:** By utilizing `@legendapp/state` and MMKV, the app achieves instant UI updates and offline capabilities without the typical Redux boilerplate overhead.
+*   **Type-Safe Design System:** Built entirely on `@shopify/restyle`, ensuring that all margins, colors, and typography strictly adhere to the app's predefined design tokens, eliminating inline styling inconsistencies.
+*   **Timezone-Aware Architecture:** Automatically detects local OS timezones via `react-native-localize` and synchronizes with the backend to ensure users receive their morning and night prompts at the correct local time, regardless of travel.
+*   **Optimized Asset Delivery:** Uses `react-native-fast-image` to aggressively cache UI assets, drastically reducing image load times and memory footprint during long scroll sessions.
 
-```bash
-# using npm
-npm run android
+## 💡 Why This Project Stands Out
 
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Building **Yours** required solving complex architectural challenges far beyond a typical CRUD application. Moving away from standard Redux in favor of `@legendapp/state` and `React Query` required a deep understanding of reactive programming and rendering optimization to prevent unnecessary component re-renders. Furthermore, implementing a robust, context-aware notification engine that flawlessly interacts with deeply nested navigation stacks demonstrates a high level of competency in mobile lifecycle management and asynchronous event handling. This project proves an ability to make mature architectural decisions that prioritize performance, type safety, and user experience.
